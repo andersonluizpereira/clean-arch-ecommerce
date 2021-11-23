@@ -1,0 +1,25 @@
+{
+  "name": "clean-branas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc:init": "tsc --init",
+    "build": "tsc",
+    "test": "jest --config ./jest.config.js --passWithNoTests --no-cache --runInBand",
+    "test:watch": "npm t -- --watch",
+    "test:staged": "npm t -- --findRelatedTests",
+    "test:coverage": "npm t -- --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "ts-jest": "^27.0.4",
+    "jest": "^27.3.1"
+  }
+}

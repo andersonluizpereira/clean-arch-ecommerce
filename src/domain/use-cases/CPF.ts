@@ -10,7 +10,6 @@ export default class CPF {
     cpf = RemoverCaracterEspecial(cpf);
 
     if (!ValidarFormatoCpf(cpf)) return false
-      try {
         let NUMERO_CALCULO_CPF = 11;
         let primeirosDigitosDoCpf = 0, segundoDigitosDoCpf = 0;
         let numeroDoDigitoResultoDoCpf;
@@ -31,8 +30,5 @@ export default class CPF {
         let numeroDigitoVerificador = cpf.substring(cpf.length - 2, cpf.length);
         numeroDoDigitoResultoDoCpf = "" + primeirosDigitosDoCpf + "" + segundoDigitosDoCpf;
         return numeroDigitoVerificador == numeroDoDigitoResultoDoCpf;
-      } catch (e) {
-        return false;
-      }
   }
 }

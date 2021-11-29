@@ -24,10 +24,21 @@ describe("ValidarCpf", () => {
       expect(false).toBe(valido);
     });
 
+    it("Dado um cpf verificar se ele é inválido", () => {
+      const valido = validacoes.validarCpf("12345678999999");
+      expect(false).toBe(valido);
+    });
+
     it("Dado um cpf verificar se ele é válido", () => {
       const valido = validacoes.validarCpf("935.411.347-80");
       expect(true).toBe(valido);
     });
-
-
+    it("Dado um cpf verificar se ele é válido", () => {
+      const valido = validacoes.validarCpf("434.395.960-01");
+      expect(true).toBe(valido);
+    });
+    it("Dado um cpf verificar se ele é válido", () => {
+      const valido = validacoes.validarCpf("43439596001");
+      expect(false).toBe(valido);
+    });
   });
